@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Ephemeral Adaptatation</title>
+	<title>Ephemeral Adaptation</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -20,9 +20,11 @@
   ================================================== -->
 	<link rel="stylesheet" href="stylesheets/base.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/example.css">
 	<link rel="stylesheet" href="stylesheets/index.css">
 	<script src="javascripts/index.js"></script>
+	<script src="javascripts/ephemeral.js"></script>
+
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -38,6 +40,8 @@
 </head>
 <body>
 
+
+
 	<!-- Primary Page Layout
 	================================================== -->
 
@@ -45,26 +49,34 @@
 
 	<div class="container">
 		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">Experiment: Ephemeral Adaptation</h1>
+			<h1 class="remove-bottom" style="margin-top: 40px">Instructions</h1>
 			
-			<hr />
+		</div>
+		<div class="sixteen columns" id="text">
+			
+			<h5>
+				Please complete a background questionnaire.
+				<br><br>
+				<button onclick="window.open('https://www.google.com/', '_blank')">Begin Questionnaire</button>
+				<br>
+			<h5>
+		</div>
+
+
+		<div class="sixteen columns">
+			<h5>
+				Instructions<br><br>	
+				<form action="" onsubmit="return checkInstructions(this)">
+				    <label for="consent">
+				      <input type="checkbox" id="consent" value="consent" />
+				      <span style="font-size:140%">I have read and understand the instructions.</span>
+				    </label>
+				    <br>
+				    <button type="submit" id="start-button">Start Practice</button>
+				</form>
+			</h5>
 		</div>
 		
-		<div class="sixteen columns" style="margin-top:20px" align="center">
-		  <h3>Participant Consent Form</h3>             
-            	<p class="block-text">This is a dummy paragraph</p>
-	<p class="block-text">Another dummy paragraph</p>
-	<p class="block-text">Your participation in this research is voluntary. You are free to refuse to take part, and you may stop taking part at any time. You are free to discontinue participation in this study at any time with no penalty.</p>
-	<p class="block-text">If you have any questions about this research, do not hesitate to contact Phoebe Lin at . If you have any questions about your rights or treatment as a participant in this research project, please contact UC Berkeley's Committee for Protection of Human Subjects at (510) 642-7461 or subjects@berkeley.edu.</p>
-	<p class="block-text">By consenting to participate, I acknowledge that I am 18 years or older, have read this consent form, agree to its contents, and agree to take part in this research. If you do not wish to consent, close this page and return the .</p>
-		  <form action="" onsubmit="return checkform(this)">
-		    <label for="consent">
-		      <input type="checkbox" id="consent" value="consent" />
-		      <span>I consent to participate.</span>
-		    </label>
-		    <button type="submit" id="next-button">Next</button>
-		  </form>
-		</div>
 	</div><!-- container -->
 
 
