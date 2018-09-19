@@ -22,7 +22,13 @@
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/example.css">
 	<link rel="stylesheet" href="stylesheets/index.css">
-	<script src="javascripts/ephemeral.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -64,15 +70,13 @@
 		<div class="sixteen columns">
 			<!-- Menu 1 -->
 			<div class="dropdown">
-			  <button id="menu1" class="dropbtn" type="button" onclick="showContent('menu1dropdown')">Menu 1</button>
-			  <div id="menu1dropdown" class="dropdown-content">
-			  	
-			  </div>
+			  <button id="menu1" class="btn dropdown-toggle btn-primary" data-toggle="dropdown" type="button" aria-expanded="false" aria-haspopup="true">Menu 1</button>
+			  
 			</div>
 
 			<!-- Menu 2 -->
 			<div class="dropdown">
-			  <button id="menu2" class="dropbtn" type="button" onclick="showContent('menu2dropdown')">Menu 2</button>
+			  <button id="menu2" class="btn dropdown-toggle btn-primary" data-toggle="dropdown" type="button" aria-expanded="false" aria-haspopup="true">Menu 2</button>
 			  <div id="menu2dropdown" class="dropdown-content">
 			  	
 			  </div>
@@ -80,7 +84,7 @@
 
 			<!-- Menu 3 -->
 			<div class="dropdown">
-			  <button id="menu3" class="dropbtn" type="button" onclick="showContent('menu3dropdown')">Menu 3</button>
+			  <button id="menu3" class="btn dropdown-toggle btn-primary" data-toggle="dropdown" type="button" aria-expanded="false" aria-haspopup="true">Menu 3</button>
 			  <div id="menu3dropdown" class="dropdown-content">
 			  	
 			  </div>
@@ -93,5 +97,8 @@
 
 <!-- End Document
 ================================================== -->
+
+	<script src="javascripts/ephemeral.js"></script>
+
 </body>
 </html>

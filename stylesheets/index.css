@@ -49,22 +49,11 @@ body {
   display: inline-block;
 }
 
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-    color: white;
-}
+
 
 .dropdown-content {
-    display: none;
+    /*display:none;*/
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
@@ -74,16 +63,24 @@ body {
 
 /* Links inside the dropdown */
 .dropdown-content a {
+    display: block;
     color: black;
     padding: 5px 16px;
     text-decoration: none;
-    display: block;
+    
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
 
   background-color: #ddd;
+}
+
+.dropdown-divider {
+  border-top: solid 1px #1a1a1a;
+  clear: both;
+  height: 1px;
+  width: 100%;
 }
 
 /* Show the dropdown menu */
