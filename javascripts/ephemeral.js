@@ -47,6 +47,49 @@ $(document).ready(function() {
   createTask();
   createMenus();
 
+  $("#menu1").on("click", function (event) {
+    var item = document.getElementById("menu1dropdown");
+    var item2 = document.getElementById("menu2dropdown");
+    var item3 = document.getElementById("menu3dropdown");
+
+    console.log(item);
+    if (item.style.display === "none") {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+    item3.style.display = "none";
+    item2.style.display = "none";
+  })
+
+  $("#menu2").on("click", function (event) {
+    var item = document.getElementById("menu2dropdown");
+    var item2 = document.getElementById("menu1dropdown");
+    var item3 = document.getElementById("menu3dropdown");
+    console.log(item);
+    if (item.style.display === "none") {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+    item3.style.display = "none";
+    item2.style.display = "none";
+  })
+
+  $("#menu3").on("click", function (event) {
+    var item = document.getElementById("menu3dropdown");
+    var item2 = document.getElementById("menu2dropdown");
+    var item3 = document.getElementById("menu1dropdown");
+    console.log(item);
+    if (item.style.display === "none") {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+    item3.style.display = "none";
+    item2.style.display = "none";
+  })
+
 });
 
 
@@ -58,6 +101,7 @@ var createMenus = function () {
     var dropdown_content = document.createElement("div");
     dropdown_content.setAttribute("class", "dropdown-content");
     dropdown_content.setAttribute("id", "menu"+i+"dropdown");
+    dropdown_content.setAttribute("style", "display: none");
 
     for (var j = 1; j < 20; j++) {
       if (j % 5 != 0) {
@@ -99,20 +143,13 @@ var createTask = function() {
 
 }
 
+
 $(".dropdown_item").click(function(e) {
 
   var predicted = false;
   var string = e.target;
 
 })
-
-$(".dropdown_content").click(function(e) {
-
-  e.style.display = "block";
-
-})
-
-
 
 
 
