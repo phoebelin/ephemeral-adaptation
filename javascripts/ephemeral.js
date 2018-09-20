@@ -83,6 +83,8 @@ $(document).ready(function() {
     }
     //console.log(sliced_array);
 
+    var zipf = [15, 8, 5, 4, 3, 3, 2, 2];
+    var weighted_selected_prompts = [];
     
 
   }
