@@ -1,75 +1,55 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>Ephemeral Adaptatation</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-  ================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
-	<link rel="stylesheet" href="stylesheets/index.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-	<script src="javascripts/index.js"></script>
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
+    <meta charset="UTF-8">
+    <title>Ephemeral Adaptation</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+    <meta name="mobile-viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+        $(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+    
 </head>
-<body>
-
-	<!-- Primary Page Layout
-	================================================== -->
-
-	<!-- Delete everything in this .container and get started on your own site! -->
-
-	<div class="container">
-		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">Experiment: Ephemeral Adaptation</h1>
-			
-			<hr />
-		</div>
-		
-		<div class="sixteen columns" style="margin-top:20px" align="center">
-		  <h3>Participant Consent Form</h3>             
-            	<p class="block-text">This is a dummy paragraph</p>
-	<p class="block-text">Another dummy paragraph</p>
-	<p class="block-text">Your participation in this research is voluntary. You are free to refuse to take part, and you may stop taking part at any time. You are free to discontinue participation in this study at any time with no penalty.</p>
-	<p class="block-text">If you have any questions about this research, do not hesitate to contact Phoebe Lin at . If you have any questions about your rights or treatment as a participant in this research project, please contact UC Berkeley's Committee for Protection of Human Subjects at (510) 642-7461 or subjects@berkeley.edu.</p>
-	<p class="block-text">By consenting to participate, I acknowledge that I am 18 years or older, have read this consent form, agree to its contents, and agree to take part in this research. If you do not wish to consent, close this page and return the .</p>
-		  <form action="" onsubmit="return checkform(this)">
-		    <label for="consent">
-		      <input type="checkbox" id="consent" value="consent" />
-		      <span>I consent to participate.</span>
-		    </label>
-		    <button type="submit" id="next-button">Next</button>
-		  </form>
-		</div>
-	</div><!-- container -->
+<body class = "body-bg">
+<div class="container rounded p-5 text-center">
+    <div class="container">
 
 
-<!-- End Document
-================================================== -->
-</body>
+        <div class="sixteen columns">
+            <h1 class="remove-bottom" style="margin-top: 40px">Harvard cs279 Menu Selection Test</h1>
+            
+            <hr />
+        </div>
+        
+        <div class="sixteen columns" style="margin-top:20px">
+          <h3>Participant Consent Form</h3><br>          
+                <p class="block-text">Welcome to the Harvard CS279 Menu Selection Test! Your contribution to our research allows us to learn more about graphical user interface, and can help improve future menu design.</p>
+                <p class="block-text"><i>Please read the following information carefully before proceeding.</i><br><br> Your participation in this research is voluntary. You are free to refuse to take part, and you may stop taking part at any time. You are free to discontinue participation in this study at any time without penalty.<br><br><strong>What: </strong>You will be shown simple tasks and instructions to finish them. We will not ask you for your name. Any data that we collect will be securely stored.<br><br>
+            <strong>Time: </strong>The duration of the test is approximately 25 minutes.
+            </p>
+                <p class="block-text">If you have questions about this research, you may contact Mengxi Tan(mtan@mde.harvard.edu), Phoebe Lin(phoebelin@gsd.harvard.edu) or Henry Wang(yuanheng_wang@g.harvard.edu).
+ If you have any questions about your rights or treatment as a participant in this research project, please contact Harvard University Committee on Use of Human Subjects at cuhs@harvard.edu.<br><br>
+By consenting to participate, I acknowledge that I have read this consent form, agree to its contents, and agree to take part in this research.
+</p>
+          
+        </div>
+    </div>
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="consent">
+      <label class="form-check-label" for="consent">I consent to participate.</label>
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="window.location.href='./background-questionnaire.html'">Submit</button>
+
+    
+</div>
+
+
 </html>
