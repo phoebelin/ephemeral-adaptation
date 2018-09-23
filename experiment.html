@@ -17,7 +17,7 @@
     <script src="js/generators.js"></script>
     <script>
         //Variables that can be changed
-        var taskTrialNum = 126;
+        var taskTrialNum = 50;
         var practiceTrialNum = 8;
         var fadeInTime = 500;
         //--------------------------------------------------------------------------------------------------------------
@@ -189,20 +189,20 @@
             var text;
             switch (level){
                 case (1):
-                    text = "Traditional (Practice " + trialNum + " of " + practiceTrialNum + ")";
+                    text = "Group A (Practice " + trialNum + " of " + practiceTrialNum + ")";
                     break
                 case (2):
-                    text = "Traditional (" + trialNum +  " of " + taskTrialNum + ")";
+                    text = "Group A (" + trialNum +  " of " + taskTrialNum + ")";
                     break
                 case (3):
-                    text = "Ephemeral (Practice " + trialNum +  " of " + practiceTrialNum + ")";
+                    text = "Group B (Practice " + trialNum +  " of " + practiceTrialNum + ")";
                     break
                 case (4):
-                    text = "Ephemeral (" + trialNum +  " of " + taskTrialNum + ")";
+                    text = "Group B (" + trialNum +  " of " + taskTrialNum + ")";
                     break;
             }
             if(level == 5){
-                window.location.href='/ephemeral/questionnaire.html';
+                window.location.href='./end-questionnaire.html';
             }
             else {
                 title.innerText = text;
@@ -227,7 +227,7 @@
     <div class="progress w-100">
         <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-color" role="progressbar" id="myprogressbar"  aria-valuemin="0" aria-valuemax="100" ></div>
     </div>
-    <div class="container-fluid pink" >
+    <div class="container-fluid " >
         <h1 class="display-4 text-center " id="title"><strong>The Experiment</strong></h1>
     </div>
 </head>
@@ -274,9 +274,5 @@
 <div class="modal" id = "infoModal" tabindex="-1" role="dialog" aria-labelledby="informationModal" aria-hidden="true">
 </div>
 </body>
-<footer class="modal-footer pink font-size w-100 " >
-    <div class="alert-link">
-        <p style="color: #8E3B46"><a  href="https://www.ninasakhnini.net" target="_blank">Nina Sakhnini</a> &copy</p>
-    </div>
-</footer>
+
 </html>
