@@ -100,6 +100,20 @@ var generateModal = function (taskNum, text) {//Function to create a modal
     var modalbody = document.createElement("div");
     modalbody.setAttribute("class", "modal-body lead");
 
+    if (level == 3) {
+        var button = document.createElement("button");
+        button.innerText = "Please complete this survey before proceeding.";
+        button.setAttribute("onclick", "window.open('https://goo.gl/forms/Npm3WmU3CCXl6McH2','_blank')");
+        modalbody.appendChild(button);
+    }
+
+    if (level == 5) {
+        var button = document.createElement("button");
+        button.innerText = "Please complete this survey before proceeding.";
+        button.setAttribute("onclick", "window.open('https://goo.gl/forms/uD0tvqYlQhKFbs5x1','_blank')");
+        modalbody.appendChild(button);
+    }
+
     var p1 = document.createElement("p");
     p1.setAttribute("id", "informationbody");
     p1.innerText =  text;

@@ -94,7 +94,7 @@ function logEvent(event, customName, customInfo) {
     console.log(uid, time, name, info, LOG_VERSION);
   }
   if (ENABLE_NETWORK_LOGGING) {
-    sendNetworkLog(uid, time, name, info, LOG_VERSION);
+    sendCs279NetworkLog(uid, time, name, info, LOG_VERSION);
   }
 }
 
@@ -110,26 +110,28 @@ if (ENABLE_NETWORK_LOGGING) {
 // Network Log submission function
 // submits to the google form at this URL:
 // docs.google.com/forms/d/e/1FAIpQLSfFA_WyDrtfu-hR1ltBUc9vTiWaidddbfuLi547ml_FIjXq9Q/viewform
-function sendNetworkLog(
+
+function sendCs279NetworkLog(
     uid,
     timestamp,
     label,
     data) {
-    var formid = "e/1FAIpQLSfFA_WyDrtfu-hR1ltBUc9vTiWaidddbfuLi547ml_FIjXq9Q";
-    var data = {
-        "entry.1099825492": uid,
-        "entry.1466585402": timestamp,
-        "entry.1701551613": label,
-        "entry.1644921485": data
-    };
-    var params = [];
-    for (key in data) {
-        params.push(key + "=" + encodeURIComponent(data[key]));
-    }
-    // Submit the form using an image to avoid CORS warnings.
-    (new Image).src = "https://docs.google.com/forms/d/" + formid +
-        "/formResponse?" + params.join("&");
+  var formid = "e/1FAIpQLScPHsHoXHYZyGG9XrRGYKDXwBqrYuH1aH4PoAt6HraZ4BQdPg";
+  var data = {
+    "entry.1284594215": uid,
+    "entry.1809227828": timestamp,
+    "entry.454024203": label,
+    "entry.526575386": data
+  };
+  var params = [];
+  for (key in data) {
+    params.push(key + "=" + encodeURIComponent(data[key]));
+  }
+  // Submit the form using an image to avoid CORS warnings.
+  (new Image).src = "https://docs.google.com/forms/d/" + formid +
+     "/formResponse?" + params.join("&");
 }
+
 //The following code is the edit googleforms.py I used to generate my function
 /*# Google form submit-maker.
 #

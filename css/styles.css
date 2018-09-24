@@ -70,14 +70,14 @@ a:hover{
     cursor: pointer;
 }
 .dropdown-menu{
-    background-color: #f1d9f7 !important;
+    background-color: #ffffff !important;
 }
 .modal-content {
-    background-color: #f1d9f7 !important;
+    background-color: #ffffff !important;
     width: 100%;
 }
 .modal-btns {
-    color: #fbefff !important;
+    color: #ffffff !important;
 }
 .modal-backdrop {
     tabindex: -1 !important;
