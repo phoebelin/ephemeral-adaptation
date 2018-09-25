@@ -100,19 +100,7 @@ var generateModal = function (taskNum, text) {//Function to create a modal
     var modalbody = document.createElement("div");
     modalbody.setAttribute("class", "modal-body lead");
 
-    if (level == 3) {
-        var button = document.createElement("button");
-        button.innerText = "Please complete this survey before proceeding.";
-        button.setAttribute("onclick", "window.open('https://goo.gl/forms/Npm3WmU3CCXl6McH2','_blank')");
-        modalbody.appendChild(button);
-    }
-
-    if (level == 5) {
-        var button = document.createElement("button");
-        button.innerText = "Please complete this survey before proceeding.";
-        button.setAttribute("onclick", "window.open('https://goo.gl/forms/uD0tvqYlQhKFbs5x1','_blank')");
-        modalbody.appendChild(button);
-    }
+    
 
     var p1 = document.createElement("p");
     p1.setAttribute("id", "informationbody");
@@ -136,10 +124,29 @@ var generateModal = function (taskNum, text) {//Function to create a modal
     startbutton.setAttribute("class", "btn btn-lg btn-color modal-btns");
     startbutton.setAttribute("data-dismiss", "modal");
     startbutton.setAttribute("id", "start"+taskNum);
+    startbutton.setAttribute("id", "start");
     startbutton.innerText = "Start";
     startbutton.addEventListener("click" , function () {
         startTrial();
     });
+
+    if (level == 3) {
+        startbutton.disabled = true;
+        var button = document.createElement("button");
+        button.innerText = "Please complete this survey before proceeding.";
+        button.setAttribute("onclick", "window.open('https://goo.gl/forms/Npm3WmU3CCXl6McH2','_blank'); document.getElementById('start').disabled = false;");
+        modalbody.appendChild(button);
+    }
+
+
+    if (level == 5) {
+        startbutton.disabled = true;
+        var button = document.createElement("button");
+        button.innerText = "Please complete this survey before proceeding.";
+        button.setAttribute("onclick", "window.open('https://goo.gl/forms/uD0tvqYlQhKFbs5x1','_blank'); document.getElementById('start').disabled = false;");
+        modalbody.appendChild(button);
+    }
+
     modalfooter.appendChild(startbutton);
     modalcontent.appendChild(modalfooter);
     modaldialog.appendChild(modalcontent);
