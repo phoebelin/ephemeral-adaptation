@@ -31,17 +31,18 @@ var itemClickListener = function () {//To control what happens when the user cli
                     case (2):
                         hit = 100;
                         miss = 26;
-                        text = "This is the first task. You will finish " + taskTrialNum + " trials similar to the practice trials.";
+                        text = "In this section, you will be asked to select one item from one of three menus for each task. The next task will display immediately after you successfully choose the correct item. There will be " + taskTrialNum + " tasks in total. You will have a chance to practice before you begin the test.";
                         break
                     case (3):
                         hit = 6;
                         miss = 2;
-                        text = "This is the second task. In this task, some of the menu items will appear sooner than other items. The items that appear sooner the system predicts that these are the items that you will most likely need. You will be asked to click an item. \nThis is a practice session. You will finish "+practiceTrialNum+" trials.";
+                        text = "In this section, you will be asked to select one item from one of three menus for each task. Some of the items will appear sooner than others. These are items that the system predicted you will most likely need. The predictions may or may not be accurate. The next task will display immediately after you successfully choose the correct item. You will have a chance to practice before you begin the test.
+ \nThis is a practice session. You will finish "+practiceTrialNum+" trials.";
                         break
                     case (4):
                         hit = 100;
                         miss = 26;
-                        text = "This is the first task. You will finish" + taskTrialNum + " trials similar to the practice trials.";
+                        text = "In this section, you will finish" + taskTrialNum + " trials similar to the practice trials.";
                         break
                 }
                 increaseProgress();
