@@ -19,7 +19,7 @@
         //Variables that can be changed
         var taskTrialNum = 1;
         var practiceTrialNum = 1;
-        var fadeInTime = 500;
+        var fadeInTime = 2000;
         //--------------------------------------------------------------------------------------------------------------
         var usedGroups = [];
         var randomNum = function(range){//To generate a Random number without repetition to assure that the items in menus are not repeating.
@@ -51,6 +51,7 @@
         var hit = 6;//Variable to count how many time the adaptation hits for 79% of practiceTrialNum and taskTrialNum
         var miss = 2;//Variable to count how many time the adaptation misses for 21% of practiceTrialNum and taskTrialNum
         var adaptiveWords = [];
+        var isPredictive = false;
         var trialNum = 1;//Variable to count trials
         var level = 1;//To store current level
         //--------------------------------------------------------------------------------------------------------------
@@ -140,6 +141,7 @@
             switch (adaptedOption) {
                 case 1:
                     result.push(nextWord);
+                    isPredictive = true;
                     break;
                 case 0:
                     do {
@@ -148,11 +150,13 @@
                         var word = currentWordGroup[wordID];
                     } while (word == nextWord);
                     result.push(word);
+                    isPredictive = false;
                     break;
                 case -1:
                     result.push("Error");
                     break
             }
+
             var word;
             do {
                 var wordID = Math.floor(Math.random() * 16);

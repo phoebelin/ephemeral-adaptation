@@ -5,7 +5,7 @@ var itemClickListener = function () {//To control what happens when the user cli
     else {
         var endTime = new Date().getTime();
         timeToAccomplish = endTime - startTime;
-        $(this).trigger('log', ['timeEvent', {time: timeToAccomplish , wrongMenus: menuErrorCtr, wrongItems: itemErrorCtr}]);
+        $(this).trigger('log', ['timeEvent', {time: timeToAccomplish , wrongMenus: menuErrorCtr, wrongItems: itemErrorCtr, level: level, prediction: isPredictive}]);
         if ((level % 2 == 1 && trialNum >=  practiceTrialNum ) || (level % 2 == 0 && trialNum >= taskTrialNum)) {
             if (level >= 4) {
                 level++;
@@ -29,19 +29,19 @@ var itemClickListener = function () {//To control what happens when the user cli
                 }
                 switch (level) {
                     case (2):
-                        hit = 100;
-                        miss = 26;
-                        text = "This is the first task. You will finish " + taskTrialNum + " trials similar to the practice trials.";
+                        hit = 40;
+                        miss = 10;
+                        text = "In this section, you will be asked to select one item from one of three menus for each task. The next task will display immediately after you successfully choose the correct item. There will be " + taskTrialNum + " tasks in total. You will have a chance to practice before you begin the test.";
                         break
                     case (3):
                         hit = 6;
                         miss = 2;
-                        text = "This is the second task. In this task, some of the menu items will appear sooner than other items. The items that appear sooner the system predicts that these are the items that you will most likely need. You will be asked to click an item. \nThis is a practice session. You will finish "+practiceTrialNum+" trials.";
+                        text = "In this section, you will be asked to select one item from one of three menus for each task. Some of the items will appear sooner than others. These are items that the system predicted you will most likely need. The predictions may or may not be accurate. The next task will display immediately after you successfully choose the correct item. You will have a chance to practice before you begin the test. This is a practice session. You will finish "+practiceTrialNum+" trials.";
                         break
                     case (4):
-                        hit = 100;
-                        miss = 26;
-                        text = "This is the first task. You will finish" + taskTrialNum + " trials similar to the practice trials.";
+                        hit = 40;
+                        miss = 10;
+                        text = "In this section, you will finish" + taskTrialNum + " trials similar to the practice trials.";
                         break
                 }
                 increaseProgress();
