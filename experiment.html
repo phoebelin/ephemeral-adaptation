@@ -17,9 +17,9 @@
     <script src="js/generators.js"></script>
     <script>
         //Variables that can be changed
-        var taskTrialNum = 1;
-        var practiceTrialNum = 1;
-        var fadeInTime = 2000;
+        var taskTrialNum = 50;
+        var practiceTrialNum = 8;
+        var fadeInTime = 500;
         //--------------------------------------------------------------------------------------------------------------
         var usedGroups = [];
         var randomNum = function(range){//To generate a Random number without repetition to assure that the items in menus are not repeating.
@@ -56,7 +56,7 @@
         var level = 1;//To store current level
         //--------------------------------------------------------------------------------------------------------------
         $(document).ready(function () {
-            generateModal(level,"You will have 3 menus and a prompt asking you to choose an item from one of these menus.\nThis is the first task. In this task, you are given a traditional menu and asked to click an item each trial. \nThis is a practice session. You will finish " + practiceTrialNum + " trials.");
+            generateModal(level,"In this section, you will be asked to select one item from one of three menus for each task. The next task will display immediately after you successfully choose the correct item. You will have a chance to practice before you begin the test. There will be 8 trials.");
             $("#infoModal").modal("show");
             $('#myprogressbar').attr('aria-valuenow', progress).css('width', progress + "%");
             wordGroups = getWordGroups(data);

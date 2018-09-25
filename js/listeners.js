@@ -32,17 +32,17 @@ var itemClickListener = function () {//To control what happens when the user cli
 
                         hit = 40;
                         miss = 10;
-                        text = "In this section, you will be asked to select one item from one of three menus for each task. The next task will display immediately after you successfully choose the correct item. There will be " + taskTrialNum + " tasks in total. You will have a chance to practice before you begin the test.";
+                        text = "In this section, you will finish" + taskTrialNum + " trials similar to the practice trials."
                         break
                     case (3):
                         hit = 6;
                         miss = 2;
-                        text = "In this section, you will be asked to select one item from one of three menus for each task. Some of the items will appear sooner than others. These are items that the system predicted you will most likely need. The predictions may or may not be accurate. The next task will display immediately after you successfully choose the correct item. You will have a chance to practice before you begin the test. This is a practice session. You will finish "+practiceTrialNum+" trials.";
+                        text = "In this section, you will be asked to select one item from one of three menus for each task. Some of the items will appear sooner than others. These are items that the system predicted you will most likely need. The predictions may or may not be accurate. The next task will display immediately after you successfully choose the correct item. You will have a chance to practice before you begin the test. There will be 8 trials.";
                         break
                     case (4):
                         hit = 40;
                         miss = 10;
-                        text = "In this section, you will finish" + taskTrialNum + " trials similar to the practice trials.";
+                        text = "In this section, you will finish " + taskTrialNum + " trials similar to the practice trials.";
                         break
                 }
                 increaseProgress();
